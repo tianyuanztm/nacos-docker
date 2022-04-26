@@ -6,8 +6,8 @@ services:
     env_file:
       - ../env/nacos-standlone-mysql.env
     volumes:
-      - ./standalone-logs/:/home/nacos/logs
-      - ./init.d/custom.properties:/home/nacos/init.d/custom.properties
+      - ./standalone-logs/:/home/nacos-server/logs
+      - ./init.d/custom.properties:/home/nacos-server/init.d/custom.properties
     ports:
       - "8848:8848"
       - "9848:9848"
@@ -21,9 +21,9 @@ services:
     env_file:
       - ../env/mysql.env
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./mysql:/var/lib/nacos/mysql
     ports:
-      - "3306:3307"
+      - "3307:3306"
 #  prometheus:
 #    container_name: prometheus
 #    image: prom/prometheus:latest
