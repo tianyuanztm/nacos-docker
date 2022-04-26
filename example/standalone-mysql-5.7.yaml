@@ -13,9 +13,9 @@ services:
       - "9848:9848"
       - "9555:9555"
     depends_on:
-      - mysql
+      - mysql-nacos
     restart: on-failure
-  mysql:
+  mysql-nacos:
     container_name: mysql-nacos
     image: nacos/nacos-mysql:5.7
     env_file:
