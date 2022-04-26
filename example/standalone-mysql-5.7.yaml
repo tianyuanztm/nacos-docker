@@ -23,7 +23,7 @@ services:
     volumes:
       - ./mysql:/var/lib/nacos/mysql
     ports:
-      - "3307:3307"
+      - "3306:3307"
 #  prometheus:
 #    container_name: prometheus
 #    image: prom/prometheus:latest
